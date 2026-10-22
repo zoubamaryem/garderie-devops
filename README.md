@@ -1,5 +1,9 @@
-
 # Ma Garderie - Projet DevOps
+
+<<<<<<< HEAD
+# Ma Garderie - Projet DevOps
+
+=======
 
 **Étudiante :** Zouba Maryem  
 **Formation :** Master DevOps & Cloud
@@ -187,4 +191,8 @@ screenshots/
 
 Zouba Maryem
 
+<<<<<<< HEAD
 Master DevOps & Cloud
+=======
+Master DevOps & Cloud
+>>>>>>> 290c99a (Update README)
