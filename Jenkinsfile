@@ -12,7 +12,7 @@ pipeline {
         stage('Install Backend') {
             steps {
                 dir('backend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
         stage('Install Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -28,20 +28,20 @@ pipeline {
         stage('Test') {
             steps {
                 dir('frontend') {
-                    sh 'npm test'
+                    bat 'npm test'
                 }
             }
         }
 
         stage('Build Backend') {
             steps {
-                sh 'docker build -t garderie-backend ./backend'
+                bat 'docker build -t garderie-backend ./backend'
             }
         }
 
         stage('Build Frontend') {
             steps {
-                sh 'docker build -t garderie-frontend ./frontend'
+                bat 'docker build -t garderie-frontend ./frontend'
             }
         }
     }
