@@ -6,8 +6,13 @@ Vagrant.configure("2") do |config|
   ip: "192.168.56.10"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"
+    vb.memory = 2048
     vb.cpus = 2
+  end
+
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "ansible/site.yml"
+    ansible.inventory_path = "ansible/inventory.ini"
   end
 
 end
